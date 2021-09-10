@@ -1,12 +1,12 @@
 /* SERVER calls and base urls */
 // POST
-var host = "http://3.7.44.132/aquabrahma-web-admin/server2.2/";
+var host = "http://192.168.43.178/telugu-devotional-admin/speed_api.php";
 var timeoutConfigVal  = 20000;
-function fetchApi(action,dataType,data,successCallback,failureCallback){
+function fetchApi(dataType,data,successCallback,failureCallback){
   $.ajax({
-    url: host+action,
+    url: host,
     type: "POST",
-    dataType:"json",
+    dataType:dataType,
     data : data,
     timeout:timeoutConfigVal,
     success: function(response) {
